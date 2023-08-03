@@ -8,10 +8,10 @@ function konversiMenit(menit) {
     let jam = Math.floor(waktu);
     let minutes = menit - (jam * 60);
 
-    if (menit >= 60) {
-        return jam  + ':' + minutes;
+    if (menit >= 60 && minutes < 10) {
+        return jam  + ': 0' + minutes;
     } else {
-        return jam + ':' + minutes
+        return jam + ': ' + minutes
     }
 }
 
